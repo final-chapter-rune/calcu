@@ -1,0 +1,93 @@
+/* ResultsPanel 样式:深蓝面板、空态插图、结果数字 */
+
+.results-panel {
+    background: var(--slate-900);
+    padding: 32px 24px;
+    /* 移动端:顶部直角(和表单直接相连),底部跟随卡片圆角 */
+    border-radius: 0 0 24px 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (min-width: 900px) {
+    .results-panel {
+        padding: 40px;
+        /* 桌面端:嵌在卡片里,右下角大圆弧是这个设计的标志 */
+        border-radius: 0 24px 24px 88px;
+    }
+}
+
+/* ---------- 空态 ---------- */
+
+.results-empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+
+    .empty-illustration {
+        width: 160px;
+        margin-bottom: 8px;
+    }
+
+    h2 {
+        color: var(--white);
+        margin: 0;
+    }
+
+    p {
+        color: var(--slate-300);
+        margin: 0;
+        line-height: 1.6;
+    }
+}
+
+/* ---------- 完成态 ---------- */
+
+.results-complete {
+    h2 {
+        color: var(--white);
+        margin: 0 0 16px;
+    }
+
+    .results-summary {
+        color: var(--slate-300);
+        line-height: 1.6;
+        margin: 0;
+    }
+
+    /* 青柠色分隔线(月供之前),light 是总还款之前的灰色细线 */
+    .result-divider {
+        height: 1px;
+        background: var(--lime);
+        margin: 32px 0 16px;
+
+        &.light {
+            background: var(--slate-700);
+            margin: 24px 0 16px;
+        }
+    }
+
+    .result-label {
+        color: var(--slate-300);
+        margin: 0 0 8px;
+    }
+
+    /* clamp(最小值, 理想值, 最大值):字号随屏幕平滑缩放 */
+    .result-monthly {
+        color: var(--lime);
+        font-size: clamp(2.5rem, 8vw, 3.5rem);
+        font-weight: 700;
+        line-height: 1.2;
+        margin: 0;
+    }
+
+    .result-total {
+        color: var(--white);
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin: 0;
+    }
+}

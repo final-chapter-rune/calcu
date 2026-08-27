@@ -1,0 +1,59 @@
+/* App 层样式:颜色变量、字体、页面背景、卡片两栏布局 */
+
+:root {
+  --lime: hsl(61, 70%, 52%);
+  --red: hsl(4, 69%, 50%);
+  --white: hsl(0, 0%, 100%);
+  --slate-100: hsl(202, 86%, 94%);
+  --slate-300: hsl(203, 41%, 72%);
+  --slate-500: hsl(200, 26%, 54%);
+  --slate-700: hsl(200, 24%, 40%);
+  --slate-900: hsl(202, 55%, 16%);
+}
+
+/* 本地字体:500 用 Medium 文件,700 用 Bold 文件 */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  src: url('/assets/fonts/static/PlusJakartaSans-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  src: url('/assets/fonts/static/PlusJakartaSans-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  margin: 0;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background: var(--slate-100);
+  color: var(--slate-900);
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.calculator-card {
+  width: 100%;
+  max-width: 63rem;
+  display: grid;
+  grid-template-columns: 1fr; 
+  background: var(--white);
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+@media (min-width: 900px) {
+  .calculator-card {
+    grid-template-columns: 1.05fr 1fr;
+  }
+}
