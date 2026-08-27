@@ -1,4 +1,4 @@
-name: Deploy React App to GitHub Pages
+name: Deploy React App to Pages
 
 on:
   push:
@@ -32,14 +32,12 @@ jobs:
         with:
           node-version: 20
           cache: npm
-          cache-dependency-path: Calculator/package-lock.json
+          cache-dependency-path: package-lock.json
 
       - name: Install dependencies
-        working-directory: Calculator
         run: npm ci
 
       - name: Build
-        working-directory: Calculator
         run: npm run build
 
       - name: Setup Pages
