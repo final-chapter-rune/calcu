@@ -38,7 +38,7 @@ function ResultsPanel({ result }) {
         /* ===== 空态:还没计算 ===== */
         <div className="results-empty">
           <img
-            src="/assets/images/illustration-empty.svg"
+            src="./assets/images/illustration-empty.svg"
             alt=""
             className="empty-illustration"
           />

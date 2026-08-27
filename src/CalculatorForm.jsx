@@ -113,7 +113,7 @@ function CalculatorForm({ onCalculate }) {
         </fieldset>
 
         <button type="submit" className="calculate-btn">
-          <img src="/assets/images/icon-calculator.svg" alt="" />
+          <img src="./assets/images/icon-calculator.svg" alt="" />
           Calculate Repayments
         </button>
       </form>
